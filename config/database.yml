@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: recetera_development
+
+test:
+  <<: *default
+  database: recetera_test
+
+production:
+  <<: *default
+  database: recetera_production
